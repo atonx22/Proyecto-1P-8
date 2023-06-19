@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.contenedor{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.encabezado{
+  background-color: #000;
+  min-height: 12vb;
+  display: flex;
+  align-items: center;
+}
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logotipo{
+  color: #FFFDFC;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.menu .nav_bar ul li{
+  position: relative;
+  float: left;
+}
+
+.menu .nav_bar ul li a{
+  font-size: 18px;
+  padding: 20px;
+  color: #FFFDFC;
+  display: block;
+  font-weight: 600;
+}
+
+.menu .nav_bar ul li a:hover{
+  color: #CE967B;
+}
+
+#menu{
+  display: none;
+}
+.menu-icono{
+  width: 45px;
+}
+.menu-ics{
+  width: 25px;
+}
+.menu label{
+  cursor: pointer;
+  display: none;
+}
+
+.footer{
+  padding: 100px 0;
+  background-color: #000;
+}
+
+.footer-contenido{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.link a{
+  font-size: 16px;
+  color: #c5c5c5;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.link h3{
+  font-size: 18px;
+  color: #F9FAFC;
+  margin-bottom: 15px;
+}
+
+.footer__copy{
+  --padding-container: 30px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.footer__copyright{
+  font-weight: 300;
+}
+
+.footer__icons{
+  margin-bottom: 10px;
+}
+
+.footer__img{
+  width: 40px;
+}
+
+@media(max-width:991px){
+  .menu{
+    padding: 30px;
+  }
+  .menu label{
+    display: initial;
+  }
+  .menu .nav_bar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #323337;
+    display: none;
+  }
+
+  .menu .nav_bar ul li{
+    width: 100%;
+  }
+
+  #menu:checked ~ .nav_bar{
+    display: initial;
+  }
+  .footer{
+    padding: 30px;
+  }
+  
+  .footer-contenido{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+
+
+
+
+
+

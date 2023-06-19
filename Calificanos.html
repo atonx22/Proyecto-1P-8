@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="autor" content="Zuñiga Alvarez Maria Jose" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="icon" href="img/Grupo-8.png" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector("form");
+        var errorContainer = document.querySelector(".error-container");
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+        // guarda las selecciones
+          var calidad = document.querySelector('input[name="calidad"]:checked');
+          var recomendar = document.querySelector('input[name="recomendar"]:checked');
+          var preferencia = document.querySelector('select[name="preferencia"]' );
+          var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+          var tiempo = document.querySelector('input[name="tiempo"]:checked');
+
+          // Validar los campos
+          var isValid = true;
+          var errorMessages = [];
+          errorMessages.push("Siga las siguientes instrucciones: ");
+          if (!calidad) {
+            isValid = false;
+            errorMessages.push("- Seleccione la calidad del trabajo");
+          }
+
+          if (!recomendar) {
+            isValid = false;
+            errorMessages.push("- Seleccione si recomendaría el trabajo");
+          }
+
+          if (preferencia.value === "null") {
+            isValid = false;
+            errorMessages.push(
+              "- Seleccione cuántas veces ha requerido nuestros servicios"
+            );
+          }
+
+          if (checkboxes.length === 0) {
+            isValid = false;
+            errorMessages.push("- Seleccione al menos un producto adquirido");
+          }
+
+          if (!tiempo) {
+            isValid = false;
+            errorMessages.push(
+              "- Seleccione si el servicio delivery llegó a tiempo"
+            );
+          }
+
+          if (isValid) {
+            form.submit();
+          } else {
+            mostrarMensajesError(errorMessages);
+          }
+        });
+
+        function mostrarMensajesError(mensajes) {
+          errorContainer.innerHTML = "";
+
+          mensajes.forEach(function (mensaje) {
+            var errorElement = document.createElement("div");
+            errorElement.textContent = mensaje;
+            errorContainer.appendChild(errorElement);
+          });
+
+          errorContainer.style.display = "block";
+
+          setTimeout(function () {
+            errorContainer.style.display = "none";
+          }, 3000);
+        }
+      });
+    </script>
+
+    <style>
+    
+      .encabezado {
+        background-image: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 12vh;
+        display: flex;
+        align-items: center;
+      }
+
+      
+
+      .container-form {
+        max-width: 80%;
+        margin: 2% 10% 2% 10%;
+        background-color: #ce967b;
+        padding: 64px;
+        border-radius: 5px;
+        box-shadow: 7px 13px 37px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 3.44rem;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-group input[type="radio"] {
+        margin-right: 10px;
+      }
+
+      .form-group input[type="submit"] {
+        background-color: #2c211c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      select {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .error-container {
+        padding: 1%;
+        background: #ffaeae;
+        margin-bottom: 2%;
+      }
+
+      @media screen and (max-width: 768px) {
+        .form-group h2 {
+          font-size: 2.5rem;
+        }
+      }
+      @media screen and (max-width: 653px) {
+        .form-group h2 {
+          font-size: 2rem;
+        }
+      }
+      @media screen and (max-width: 275px) {
+        .form-group h2 {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class=" menu contenedor">
+        <a href="Inicio.html" class="logotipo">Grupo 8</a>
+        <input type="checkbox" id="menu"/>
+        <label for="menu">
+            <img src="img/menu.png" class="menu-icono" alt="">
+        </label>
+
+        <nav class="nav_bar">
+            <ul>
+                <li><a href="Inicio.html">Iniciar Sesión</a></li>
+                <li><a href="Formulario_registro.html">Registrar</a></li>
+                <li><a href="FORPROYECTO.html"> <img src="img/Sbag.png" class="menu-ics" alt=""></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    </header>
+
+    <div class="container-form" style="width: 100%">
+      <div class="form-group">
+        <h2>Califica nuestro trabajo</h2>
+      </div>
+
+      <form action="" method="post">
+        <div class="form-group">
+          <label>Calidad del trabajo:</label>
+          <div>
+            <input type="radio" name="calidad" value="excelente" />
+            Excelente
+          </div>
+          <div><input type="radio" name="calidad" value="bueno" /> Bueno</div>
+          <div>
+            <input type="radio" name="calidad" value="regular" /> Regular
+          </div>
+          <div><input type="radio" name="calidad" value="malo" /> Malo</div>
+        </div>
+
+        <div class="form-group">
+          <label>Recomendarías nuestro trabajo:</label>
+          <div><input type="radio" name="recomendar" value="si" /> Sí</div>
+          <div><input type="radio" name="recomendar" value="no" /> No</div>
+        </div>
+
+        <div class="form-group">
+          <label>¿Cuantas veces haz requerido nuestros servicios?:</label>
+          <select name="preferencia">
+            <option value="null">Elija una opción</option>
+            <option value="opcion1">Esta es la primera vez</option>
+            <option value="opcion2">2 o 3 veces</option>
+            <option value="opcion3">Soy cliente frecuente</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Selecciona el producto que adquiriste:</label>
+          <input type="checkbox" name="stickers" value="stickers" />
+          Stickers
+          <br />
+          <input type="checkbox" name="termo" value="termo" />
+          Termo
+          <br />
+          <input type="checkbox" name="cartuchera" value="cartuchera" />
+          Cartuchera
+          <br />
+          <input type="checkbox" name="camiseta" value="camiseta" />
+          Camiseta
+          <br />
+          <input type="checkbox" name="almohada" value="almohada" />
+          Almohada
+          <br />
+          <input type="checkbox" name="gorra" value="gorra" />
+          Gorra
+        </div>
+
+        <div class="form-group">
+          <label>Nuestro servicio delivery llegó al tiempo estimado:</label>
+          <div><input type="radio" name="tiempo" value="si" /> Sí</div>
+          <div><input type="radio" name="tiempo" value="no" /> No</div>
+        </div>
+
+        <div class="form-group">
+          <label>Comentarios adicionales:</label>
+          <textarea
+            name="comentarios"
+            rows="4"
+            cols="40"
+            style="width: 100%"
+          ></textarea>
+        </div>
+        <div class="error-container" style="display: none"></div>
+        <div class="form-group" style="text-align: center">
+          <input type="submit" value="Enviar calificación" />
+        </div>
+      </form>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-contenido contenedor">
+          <div class="link">
+              <h3>Vende con nosotros</h3>
+              <ul>
+                  <li><a href="#">Imprime bajo demanda</a></li>
+                  <li><a href="#">Utiliza nuestro servicio de almacenamiento</a></li>
+                  <li><a href="#">Vende Online sin inventarios</a></li>
+                  <li><a href="#">Asesorate con nosotros</a></li>
+              </ul>
+          </div>
+    
+          <div class="link">
+              <h3>Recursos</h3>
+              <ul>
+                  <li><a href="#">Envíos</a></li>
+                  <li><a href="#">Devoluciones</a></li>
+                  <li><a href="Tarjeta_regalo.html">Tarjetas regalo</a></li>
+                  <li><a href="#">Guía</a></li>
+              </ul>
+          </div>
+    
+          <div class="link">
+              <h3>Sobre Nosotros</h3>
+              <ul>
+                  <li><a href="Nosotros.html">Quiénes somos</a></li>
+                  <li><a href="Contacto.html">Contacto</a></li>
+                  <li><a href="Calificanos.html">Califícanos</a></li>
+              </ul>
+          </div>
+    
+          <section class="footer__copy">
+              <div class="footer__social">
+                  <a href="#" class="footer_icons"><img src="./img/facebook.svg" class="footer_img"></a>
+                  <a href="#" class="footer_icons"><img src="./img/twitter.svg" class="footer_img"></a>
+                  <a href="#" class="footer_icons"><img src="./img/youtube.svg" class="footer_img"></a>
+              </div>
+    
+              <h4 class="footer__copyright">Derechos reservados &copy; Grupo #8</h4>
+          </section>
+    
+    
+      </div>
+    </footer>
+  </body>
+</html>

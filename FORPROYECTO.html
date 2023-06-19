@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name ="autor" content="Romina Cedeño">
+  <title>Información de Contacto </title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="img/Grupo-8.png">
+  <script>
+    function validarSoloLetras(event) {
+      var inputValue = event.which;
+      if (!(inputValue >= 65 && inputValue <= 90) && !(inputValue >= 97 && inputValue <= 122) && inputValue !== 32) {
+        event.preventDefault();
+      }
+    }
+
+    function validarTexto() {
+      var texto = document.getElementById('text').value;
+      var resultado = document.getElementById('resultado');}
+
+      // Verificar si el campo de texto está vacío
+      if (texto.trim() === '') {
+        resultado.innerHTML = 'El campo de texto está vacío.';
+      } else {
+        resultado.innerHTML = 'El campo de texto no está vacío.';
+      }
+    document.getElementById("submit").addEventListener("click", function(event){
+  event.preventDefault()
+});
+
+  </script>
+  <style>
+    /* Estilos CSS */
+    body {  
+      background-color: #f2a667;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #d65a29;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="Celular"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #d8ce3b;
+      color: #fff;
+      padding: 10px 20px;
+      border:rgba(17, 6, 142, 0.1);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header class="encabezado">
+    <div class=" menu contenedor">
+      <a href="Inicio.html" class="logotipo">Grupo 8</a>
+      <input type="checkbox" id="menu"/>
+      <label for="menu">
+          <img src="img/menu.png" class="menu-icono" alt="">
+      </label>
+
+      <nav class="nav_bar">
+          <ul>
+              <li><a href="Inicio.html">Iniciar Sesión</a></li>
+              <li><a href="Formulario_registro.html">Registrar</a></li>
+              <li><a href="FORPROYECTO.html"> <img src="img/Sbag.png" class="menu-ics" alt=""></a></li>
+          </ul>
+      </nav>
+  </div>
+
+  </header>
+  <div class="container">
+    <h2>Formulario de pedido</h2>
+    <form action="/procesar-formulario" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" onkeypress="validarSoloLetras(event)" placeholder="Ingrese solo letras"/>
+      <p id="resultado"></p>
+
+      <label for="Correo electrónico">Correo electrónico:</label>
+      <input type="text" id="Correo electrónico" name="Correo electrónico" required>
+
+      <label for="Celular">Celular:</label>
+      <input type="number" onkeypress="validarSoloNumeros(event)" placeholder="Ingrese solo números"/>
+
+      <label for="Cédula">Cédula:</label>
+      <input type="number" onkeypress="validarSoloNumeros(event)" placeholder="Ingrese solo números"/>
+
+      <label>Tipo de producto:</label><br>
+      <label>Almohadas</label>
+      <input type="radio" name="Tipo de producto" value="Almohadas">
+      <label for="radio"></label>
+      <br>
+
+      <label>Camisas</label>
+      <input type="radio" name="Tipo de producto" value="Camisas">
+      <label for="radio"></label>
+      <br>
+
+      <label>Cartucheras</label>
+      <input type="radio" name="Tipo de producto" value="Cartucheras">
+      <label for="radio"></label>
+      <br>
+
+      <label>Gorras</label>
+      <input type="radio" name="Tipo de producto" value="Gorras">
+      <label for="radio"></label>
+      <br>
+
+      <label>Tomatodos</label>
+      <input type="radio" name="Tipo de producto" value="Tomatodos">
+      <label for="radio"></label>
+      <br>
+
+      <label>Stickers</label>
+      <input type="radio" name="Tipo de producto" value="Stickers">
+      <label for="radio"></label>
+      <br>
+
+      <label>Seleccione un color:</label><br>
+      <input type="checkbox" > Amarillo <br>
+      <input type="checkbox" > Rojo <br>
+      <input type="checkbox" > Verde <br>
+      <input type="checkbox" > Azul <br>
+      <input type="checkbox" > Fucsia <br>
+      <input type="checkbox" > Morado <br>
+
+
+      <label for="mensaje">Frase personalizada:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+      <input type="submit" value="Enviar">
+    </form>
+  </div>
+  <footer class="footer">
+    <div class="footer-contenido contenedor">
+        <div class="link">
+            <h3>Vende con nosotros</h3>
+            <ul>
+                <li><a href="#">Imprime bajo demanda</a></li>
+                <li><a href="#">Utiliza nuestro servicio de almacenamiento</a></li>
+                <li><a href="#">Vende Online sin inventarios</a></li>
+                <li><a href="#">Asesorate con nosotros</a></li>
+            </ul>
+        </div>
+  
+        <div class="link">
+            <h3>Recursos</h3>
+            <ul>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Devoluciones</a></li>
+                <li><a href="Tarjeta_regalo.html">Tarjetas regalo</a></li>
+                <li><a href="#">Guía</a></li>
+            </ul>
+        </div>
+  
+        <div class="link">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+                <li><a href="Nosotros.html">Quiénes somos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Calificanos.html">Califícanos</a></li>
+            </ul>
+        </div>
+  
+        <section class="footer__copy">
+            <div class="footer__social">
+                <a href="#" class="footer_icons"><img src="./img/facebook.svg" class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="./img/twitter.svg" class="footer_img"></a>
+                <a href="#" class="footer_icons"><img src="./img/youtube.svg" class="footer_img"></a>
+            </div>
+  
+            <h4 class="footer__copyright">Derechos reservados &copy; Grupo #8</h4>
+        </section>
+  
+  
+    </div>
+  </footer>
+</body>
+</html>
+
+ 

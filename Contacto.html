@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name ="autor" content="Cristhina Ortega Jaramillo">
+  <title>Información de Contacto </title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="img/Grupo-8.png">
+  <style>
+    main{
+        padding: 55px;
+    }
+    .container-redes{
+        padding: 55px 150px 55px 150px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 70px;
+    }
+    .item{
+        border-radius:10px;
+        background-color: #E1E2E6;
+        }
+    .item:hover{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+        }
+    .item img{
+        width: 100%;
+        height: 300%;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+        transition: all .5s;
+        }
+    .item figure{
+        overflow: hidden;
+        }
+
+   .item:hover img{
+        transform: scale(1.2);
+    }
+    .info-redes{
+        padding: 15px 15px;
+        line-height: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .info-redes h2{
+        font-size: 35px;
+        line-height: 50px;
+        color: #CE967B;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .info-redes h3{
+        font-size: 18px;
+        line-height: 25px;
+        color: #414247;
+    }
+    .linkfrmcontact{
+        text-align: center;
+    }
+    .linkfrmcontact h3{
+        font-size: 24px;
+        font-weight: 800;
+    }
+    #btncontact {
+      color: black;
+      font-weight: 600;
+      background-color: #CE967B;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    @media(max-width:991px){
+        .container-redes{
+            display: initial;
+
+
+        }
+    }
+  </style>
+</head>
+<body>
+    <header class="encabezado">
+        <div class=" menu contenedor">
+          <a href="Inicio.html" class="logotipo">Grupo 8</a>
+          <input type="checkbox" id="menu"/>
+          <label for="menu">
+              <img src="img/menu.png" class="menu-icono" alt="">
+          </label>
+  
+          <nav class="nav_bar">
+              <ul>
+                  <li><a href="Inicio.html">Iniciar Sesión</a></li>
+                  <li><a href="Formulario_registro.html">Registrar</a></li>
+                  <li><a href="FORPROYECTO.html"> <img src="img/Sbag.png" class="menu-ics" alt=""></a></li>
+              </ul>
+          </nav>
+      </div>
+  
+      </header>
+  <main>
+    <h1 style="color: #CE967B; font-size: 50px; text-align: center;">¡Sigue en nuestras redes sociales!</h1>
+    <p style="color: #0e0d0d; font-size: 25px; text-align: center; padding: 12px 55px 0 55px;"> Síguenos para ver las últimas novedades de productos, consejos de marketing, 
+    tutoriales y mucho más</p>
+    <section class="redes">
+    <div class="container-redes">
+        <div class="item">
+            <figure>
+                <a href=https://www.facebook.com/groups/printful.insiders>
+                <img src="img/fb.png" class="menu-ics" alt="Facebook">
+                </a>
+            </figure>
+            <div class="info-redes">
+                <h2> Facebook </h2>
+                <p>
+                    ~ Aporta o recibe consejos.
+                    <br>
+                    ~ Comparte tu experiencia como nuestro cliente.      
+                </p> 
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <a href=https://www.instagram.com/printful.esp> 
+                <img src="img/ig.png" class="menu-ics" alt="Instagram">
+                </a>   
+            </figure>
+            <div class="info-redes">
+                <h2> Instagram </h2>
+                <p>
+                    ~ Mantente al dia de las novedades y tendencias en moda.
+                    <br>
+                    ~ Se el primero en enterarte de los lanzamientos de productos.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <a href=https://www.youtube.com/channel/UChPhgR4Lw2oroxuKfcvY6cQ>
+                <img src="img/Yt.png" class="menu-ics" alt="Youtube">
+                </a>
+            </figure>
+            <div class="info-redes">
+                <h2>Twitter </h2>
+                <p>
+                    ~ Comparte tu experiencia. 
+                    <br>
+                    ~ Debate o da tu punto de vista sobre la sublimacion.
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                
+                <img src="img/tw.png" class="menu-ics" alt="Twitter"></a>
+
+            </figure>
+            <div class="info-redes">
+                <h2>Youtube </h2>
+                <p>
+                    ~ Descubre los ultimos trucos y consejos sobre comercio electronico e impresion bajo demanda.
+                    <br>
+                    ~ Encuentra utiles consejos en nuestros videos semanales.
+                    <br>
+                    ~ Mira nuestros videos de productos para verlos en acción.
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="linkfrmcontact">
+        <h3>¡Estamos aquí para ayudarte!</h3>
+        <p>Si tienes alguna pregunta o consulta, no dudes en ponerte en contacto con nosotros.</p>
+        <br>
+        <button id="btncontact" type="button">
+            <a href="FrmContacto.html">Contactanos</a>
+        </button>      
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-contenido contenedor">
+        <div class="link">
+            <h3>Vende con nosotros</h3>
+            <ul>
+                <li><a href="#">Imprime bajo demanda</a></li>
+                <li><a href="#">Utiliza nuestro servicio de almacenamiento</a></li>
+                <li><a href="#">Vende Online sin inventarios</a></li>
+                <li><a href="#">Asesorate con nosotros</a></li>
+            </ul>
+        </div>
+  
+        <div class="link">
+            <h3>Recursos</h3>
+            <ul>
+                <li><a href="#">Envíos</a></li>
+                <li><a href="#">Devoluciones</a></li>
+                <li><a href="Tarjeta_regalo.html">Tarjetas regalo</a></li>
+                <li><a href="#">Guía</a></li>
+            </ul>
+        </div>
+  
+        <div class="link">
+            <h3>Sobre Nosotros</h3>
+            <ul>
+                <li><a href="Nosotros.html">Quiénes somos</a></li>
+                <li><a href="Contacto.html">Contacto</a></li>
+                <li><a href="Calificanos.html">Califícanos</a></li>
+            </ul>
+        </div>
+  
+        <section class="footer__copy">
+            <div class="footer__social">
+                <a href="#" class="footer__icons"><img src="./img/facebook.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./img/twitter.svg" class="footer__img"></a>
+                <a href="#" class="footer__icons"><img src="./img/youtube.svg" class="footer__img"></a>
+            </div>
+  
+            <h4 class="footer__copyright">Derechos reservados &copy; Grupo #8</h4>
+        </section>
+  
+  
+    </div>
+  </footer>
+  <script type="text/javascript" src="js/validacionescontact.js"></script>
+</body>
+</html>
+

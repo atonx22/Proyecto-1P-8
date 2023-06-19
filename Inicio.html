@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name ="autor" content="Albia Bazurto Christian Adonis" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseños Personalizados</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="icon" href="img/Grupo-8.png">
+    <style>
+
+        .encabezado-contenido{
+            text-align: left;
+            padding: 15px;
+            background-color: #dacece;
+        }
+
+        .vin{
+            display: inline-block;
+            padding: 11px 35px;
+            background-color: #CE967B;
+            color: #F9FAFC;
+            text-transform: uppercase;
+        }
+
+        .vin:hover{
+            background-color: #EBAD8D;
+        }
+        .Producto{
+            padding: 100px 0;
+            background-color: #E1E2E6;
+            position: relative;
+        }
+
+        .Producto-contenido{
+            text-align: center;
+        }
+        .Producto-contenido h2{
+            font-size: 55px;
+            line-height: 70px;
+            columns: #323337;
+            text-transform: uppercase;
+            padding: 0 250px;
+            margin-bottom: 15px;
+        }
+
+        .texto-p{
+            font-size: 22px;
+            color: #414247;
+            padding: 0 250px;
+            margin-bottom: 25px;
+        }
+
+        .Producto-grupo{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .Producto-1{
+            padding: 0 25px;
+        }
+        .Producto-1 img{
+            width: 300px;
+        }
+        .disenoimg{
+            right: 0; 
+            padding: 10px 20px 45px 0;
+            border-radius: 150px;
+            margin-right: 68px;
+        }
+        .diseno-img{
+            position:absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .Producto-1 h3{
+            color: #323337;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+        .Producto-1 p{
+            font-size: 16px;
+            color: #000000;
+            padding: 0 50px;
+            margin-bottom: 10px;
+        }
+
+        .productos{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),                  
+            url("img/images2.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            padding: 100px 0;
+        }
+
+        .productos-contenido{
+            text-align: center;
+        }
+
+        .productos-contenido h2{
+            font-size: 55px;
+            line-height: 70px;
+            color: #F9FAFC;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+        .productos-contenido p{
+            font-size: 16px;
+            color: #c5c5c5;
+            margin-bottom: 50px;
+            padding: 0 100px;
+        }
+
+        .productos-grupo{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .producto-1{
+            padding: 0 100px;
+        }
+
+        .producto-1 img{
+            width: 120px;
+            margin-bottom: 15px;
+        }
+        .producto-1 h3{
+            color: #EACCB3;
+            font-size: 18px;
+        }
+
+        .general{
+            display: flex;
+        }
+        .general-1{
+            width: 50%;
+            padding: 100px 250px 100px 100px;
+            background-color: #E1E2E6;
+        }
+        .general-2{
+            background-image: url("img/diseno1.jpeg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+        }
+
+        .general-3{
+            background-image: url("img/diseno2.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+        }
+
+        h2{
+            font-size: 55px;
+            line-height: 70px;
+            color: #323337;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        p{
+            font-size: 16px;
+            color: #414247;
+            margin: 25px 0 45px 0;
+        }
+
+        .galeria-contenedor h2 {
+            text-align: center;
+            position: relative;
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .galeria-contenedor h2::before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            background-color: #000;
+            top: 50%;
+            z-index: -1;
+        }
+
+        h2 span{
+            background-color: #ecf4fb;
+            padding: 0 15px;
+        }
+        .imagengaleria{
+            width: 80%;
+            margin: 50px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+            gap: 30px;
+        }
+        .imagengaleria img{
+            width: 100%;
+            cursor: pointer;
+            transition: 1s;
+        }
+        .imagengaleria img:hover{
+            transform: scale(1.1);
+        }
+        .imgcont{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+        }
+        .imgcont img{
+            width: 90%;
+            max-width: 600px;
+        }
+        .imgcont span{
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media(max-width:991px){
+  .menu{
+    padding: 30px;
+  }
+  .menu label{
+    display: initial;
+  }
+  .menu .nav_bar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #323337;
+    display: none;
+  }
+
+  .menu .nav_bar ul li{
+    width: 100%;
+  }
+
+  #menu:checked ~ .nav_bar{
+    display: initial;
+  }
+  .encabezado-contenido{
+    flex-direction: column;
+  }
+
+  .encabezado-contenido{
+    padding: 20px 30px;
+  }
+  .encabezado-contenido h1{
+    padding: 0;
+  }
+  .encabezado-contenido p{
+    padding: 0;
+  }
+  .disenoimg{
+    display: none;
+  }
+
+  .Producto{
+    padding: 30px;
+  }
+  .Producto-contenido h2{
+    padding: 0;
+  }
+  .texto-p{
+    padding: 0;
+  }
+  .Producto-grupo{
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .diseno-img{
+    display: none;
+  }
+  .productos{
+    padding: 30px;
+  }
+  .productos-contenido p{
+    padding: 0;
+  }
+  .productos-grupo{
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .producto-1{
+    margin-bottom: 25px;
+  }
+
+  .general{
+    flex-direction: column;
+  }
+  .general-1{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+  }
+  .general-2, .general-3{
+    display: none;
+  }
+
+  .galeria-contenedor h2{
+    text-decoration: underline;
+}
+.galeria-contenedor h2::before{
+    display: none;
+}
+h2 span{
+    padding: 0;
+}
+
+  .footer{
+    padding: 30px;
+  }
+  .footer-contenido{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+        /*@media screen and (max-width:400px) {
+            .galeria-contenedor h2{
+                text-decoration: underline;
+            }
+            .galeria-contenedor h2::before{
+                display: none;
+            }
+            h2 span{
+                padding: 0;
+            }
+            
+        }*/
+
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <div class=" menu contenedor">
+          <a href="Inicio.html" class="logotipo">Grupo 8</a>
+          <input type="checkbox" id="menu"/>
+          <label for="menu">
+              <img src="img/menu.png" class="menu-icono" alt="">
+          </label>
+  
+          <nav class="nav_bar">
+              <ul>
+                  <li><a href="Inicio.html">Iniciar Sesión</a></li>
+                  <li><a href="Formulario_registro.html">Registrar</a></li>
+                  <li><a href="FORPROYECTO.html"> <img src="img/Sbag.png" class="menu-ics" alt=""></a></li>
+              </ul>
+          </nav>
+      </div>
+  
+      </header>
+
+
+    <section class="encabezado-contenido ">
+        <div class="encabezado-contenido contenedor">
+            <h1 style="font-size: 55px;line-height: 70px;color: #323337;text-transform: uppercase;margin-bottom: 35px;text-align:left ; padding: 20px 0px 0px 25px;">Diseños <br>Personalizados</br></h1>
+            <img src="img/images4.jpg" class="disenoimg"alt="princ" style="width: 350px; height: 300px; position:absolute;">
+            <p style="color: #323337;  font-size: 20px;
+            margin-bottom: 18px;padding-right: 38%;text-align: justify; padding-left: 25px;">
+            Bienvenidos a nuesto sitio web donde vas a encontrar diferentes productos personalizados
+            realizados pensando en el gusto de cada cliente, diseños personalizados para parejas, para amigos, para padres.
+            También en objetos como tazas. Imagínate tomar un café por la mañana con tu taza de algún personaje favorito de alguna pélicula, serie o anime.
+            O si quieres sorprender a papá o mamá en su cumpleaños, podrías regalarle algún objeto u accesorio personalizado.
+            </p>
+            <a href="Inicio.html" class="vin" style="margin-left: 25px;">Información</a>
+        </div>
+    </section>
+
+
+
+
+    <section class="Producto">
+        <img class="diseno-img" src="img/diseno.png" alt="" style="width: 360px; height: 300px;">
+        <div class="Producto-contenido contenedor">
+            <h2>Para diferentes accesorios y objetos...</h2>
+            <p class="texto-p">Observa detenidamente los estilos de diseños y elige el que más te guste.</p>
+            <div class="Producto-grupo">
+                <div class="Producto-1">
+                    <img src="img/diseño-tasa.png" alt="">
+                    <h3>Tasas</h3>
+                    <p>
+                        Elige el diseño que mejor va con tu personalidad. 
+                    </p>
+                </div>
+
+                <div class="Producto-1">
+                    <img src="img/diseño-accesorio.png" alt="">
+                    <h3>Accesorios</h3>
+                    <p>
+                        Objetos de todo tipo. Para personalizar.
+                    </p>
+                </div>
+
+                <div class="Producto-1">
+                    <img src="img/diseño-ropa.png" alt="">
+                    <h3>Ropa</h3>
+                    <p>
+                        Personaliza tu vestimenta. 
+                        Sorprende a tus amigos o pareja.
+                    </p>
+                </div>
+
+
+            </div>
+            <a href="Formulario.html" class="vin">Form</a>
+        </div>
+    </section>
+
+    <main class="productos">
+        <div class="productos-contenido contenedor">
+            <h2>Estilos para para personalizar</h2>
+            <div class="productos-grupo">
+                <div class="producto-1">
+                    <img src="img/anim1.png">
+                    <h3>Anime</h3>
+                </div>
+                <div class="producto-1">
+                    <img src="img/animado.png">
+                    <h3>Dibujos Animados</h3>
+                </div>
+
+                <div class="producto-1">
+                    <img src="img/formal.png">
+                    <h3>Formales</h3>
+                </div>
+            </div>
+            <p>
+                Para todo tipo de gustos. Escoge el que más te guste.
+            </p>
+            <a href="Productos.html" class="vin">Información</a>
+        </div>
+    </main>
+
+    <section class="general">
+        <div class="general-1">
+            <h2>Diseños gamer</h2>
+            <p>
+                Tenemos los mejores diseños para aquellos que les gusta personalizar sobre juegos.
+            </p>
+            <a href="Productos.html" class="vin">Información</a>
+        </div>
+        <div class="general-2"></div>
+    </section>
+
+    <section class="general">
+        <div class="general-3"></div>
+        <div class="general-1">
+            <h2>Para enamorados</h2>
+            <p>
+                Regala a tu pareja un detalle de aniversario.
+                O para el cumpleaños de algún amigo, hazle saber que realmente le importas.
+            </p>
+            <a href="Productos.html" class="vin">Información</a>
+        </div>
+    </section>
+
+    <section class="galeria-contenedor">
+        <div class="imgcont" id="imgconbox">
+            <img src="img/bl1.PNG" id="imgCo" alt="">
+            <span onclick="closeImg()">X</span>
+        </div>
+        <h2><span>Galería</span></h2>
+        <div class="imagengaleria">
+            <img src="img/bl1.PNG" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+            <img src="img/bl2.PNG" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+            <img src="img/bl3.PNG" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+            <img src="img/bl4.jpg" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+            <img src="img/bl4.jpg" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+            <img src="img/bl4.jpg" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+            <img src="img/bl4.jpg" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+            <img src="img/bl4.jpg" onclick="openFulImg(this.src)" alt="" style="width: 250px; height: 250px;">
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="footer-contenido contenedor">
+            <div class="link">
+                <h3>Vende con nosotros</h3>
+                <ul>
+                    <li><a href="#">Imprime bajo demanda</a></li>
+                    <li><a href="#">Utiliza nuestro servicio de almacenamiento</a></li>
+                    <li><a href="#">Vende Online sin inventarios</a></li>
+                    <li><a href="#">Asesorate con nosotros</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="Tarjeta_regalo.html">Tarjetas regalo</a></li>
+                    <li><a href="#">Guía</a></li>
+                </ul>
+            </div>
+
+            <div class="link">
+                <h3>Sobre Nosotros</h3>
+                <ul>
+                    <li><a href="Nosotros.html">Quiénes somos</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href="Calificanos.html">Califícanos</a></li>
+                </ul>
+            </div>
+
+            <section class="footer__copy container">
+                <div class="footer__social">
+                    <a href="#" class="footer__icons"><img src="./img/facebook.svg" class="footer__img"></a>
+                    <a href="#" class="footer__icons"><img src="./img/twitter.svg" class="footer__img"></a>
+                    <a href="#" class="footer__icons"><img src="./img/youtube.svg" class="footer__img"></a>
+                </div>
+    
+                <h3 class="footer__copyright">Derechos reservados &copy; Grupo #8</h3>
+            </section>
+
+
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/validaciones.js">
+     
+    </script>
+</body>
+</html>
+

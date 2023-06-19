@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name ="autor" content="Cristhina Ortega Jaramillo" >
+  <title>Información de Contacto - Tu Empresa de Productos Personalizados</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" href="img/Grupo-8.png">
+  <style>
+.container-form{
+  display: block
+}
+
+h1 , p{
+  text-align: center;
+}
+.boton:hover{
+  background-color: #646261;
+}
+
+.form-contacto{
+    width: 500px;
+    background: #E1E2E6;
+    padding: 55px;
+    margin: 3em auto;
+    border-radius: 4px;
+    color: rgb(29, 28, 28);
+    box-shadow: 7px 10px 25px #566abd; 
+    text-align: justify;
+}
+.form-contacto h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form{
+    background: #CE967B;
+    padding: 150px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 3px solid #EBAD8D;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+.form-contacto p{
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+}
+.form-contacto a{
+    color: white;
+    text-decoration: none;
+}
+.form-contacto a:hover{
+    color: white;
+    text-decoration: underline;
+}
+.form-contacto .boton{
+    width: 100%;
+    background: #2c211c;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+#btncontact {
+      color: black;
+      font-weight: 600;
+      background-color: #CE967B;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+</style>
+<body>
+  <header class="encabezado">
+    <div class=" menu contenedor">
+      <a href="Inicio.html" class="logotipo">Grupo 8</a>
+      <input type="checkbox" id="menu"/>
+      <label for="menu">
+          <img src="img/menu.png" class="menu-icono" alt="">
+      </label>
+
+      <nav class="nav_bar">
+          <ul>
+              <li><a href="Inicio.html">Iniciar Sesión</a></li>
+              <li><a href="Formulario_registro.html">Registrar</a></li>
+              <li><a href="FORPROYECTO.html"> <img src="img/Sbag.png" class="menu-ics" alt=""></a></li>
+          </ul>
+      </nav>
+  </div>
+
+  </header>
+
+  <div class="container-form">      
+        <h1 style="color: #CE967B; font-size: 40px;">Contactanos</h1>
+        <p style="color: #0e0d0d; font-size: 20px; "> 
+          ¡Estamos aquí para ayudarte! 
+          <br>
+          Si tienes alguna pregunta o consulta, no dudes en ponerte en contacto con nosotros.</p>
+    <div class="form-contacto">
+      <h4>Formulario de Contacto</h4>
+      <form id="formContactanos" class="formContactanos" name="Contactanos">
+            <div>
+              <label>Nombre y apellidos:</label>
+              <input type="text" id="nombreapellidos" name="nombreapellidos" placeholder="Ingrese nombre">
+            </div>
+            <div>
+              <label>Telefono:</label>
+              <input type="text" id="Telefono" name="telefono" placeholder="Ingrese Telefono">
+            </div>
+            <div>
+              <label>Correo Electrónico:</label>
+              <input type="text" id="correo" name="correo" placeholder="Ingrese Email">
+            </div>
+            <div>
+              <label>Asunto:</label>
+              <br>
+              <input type="checkbox" name="asunto" value="1">
+              Sublimados
+              <input type="checkbox" name="asunto" value="2">
+              Tejidos
+              <input type="checkbox" name="asunto" value="3">
+              Entregas
+            </div>
+            <div>
+              <label>Producto:</label>
+              <br>
+              <input type="radio" name="producto" value="1">  
+              Tazas/Termos
+              <input type="radio" name="producto" value="2"> 
+              Camisas
+              <input type="radio" name="producto" value="3">
+              Bolsos
+            </div>
+            <div>
+              <label>Tipo de negocio</label>
+              <select name="tipoN" id="tipoN" class="formItem">
+                <option value="0">Seleccione..</option>
+                <option value="1">Uso Personal</option>
+                <option value="2">Emprendimiento</option>
+                <option value="3">Microempresa</option>
+              </select>
+            </div>
+            <div>
+              <label>Mensaje:</label>
+              <br>
+              <textarea id="sms" rows="5" cols="50" name="sms"></textarea>
+           </div>
+          <input type="submit" value="Guardar">
+        </form>
+    </div>
+  </div>
+
+    <footer class="footer">
+        <div class="footer-contenido contenedor">
+            <div class="link">
+                <h3>Vende con nosotros</h3>
+                <ul>
+                    <li><a href="#">Imprime bajo demanda</a></li>
+                    <li><a href="#">Utiliza nuestro servicio de almacenamiento</a></li>
+                    <li><a href="#">Vende Online sin inventarios</a></li>
+                    <li><a href="#">Asesorate con nosotros</a></li>
+                </ul>
+            </div>
+      
+            <div class="link">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="Tarjeta_regalo.html">Tarjetas regalo</a></li>
+                    <li><a href="#">Guía</a></li>
+                </ul>
+            </div>
+      
+            <div class="link">
+                <h3>Sobre Nosotros</h3>
+                <ul>
+                    <li><a href="Nosotros.html">Quiénes somos</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href="Calificanos.html">Califícanos</a></li>
+                </ul>
+            </div>
+      
+            <section class="footer__copy">
+                <div class="footer__social">
+                    <a href="#" class="footer__icons"><img src="./img/facebook.svg" class="footer__img"></a>
+                    <a href="#" class="footer__icons"><img src="./img/twitter.svg" class="footer__img"></a>
+                    <a href="#" class="footer__icons"><img src="./img/youtube.svg" class="footer__img"></a>
+                </div>
+      
+                <h4 class="footer__copyright">Derechos reservados &copy; Grupo #8</h4>
+            </section>
+      
+      
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/validacionescontact.js">
+    </script>
+     
+</body>
+</html>
